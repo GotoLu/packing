@@ -332,6 +332,9 @@ export default {
     }
   },
 
+  /** babel-loader配置项 */
+  babelLoader: {},
+
   /**
    * `css-loader` 配置项
    * @type {object}

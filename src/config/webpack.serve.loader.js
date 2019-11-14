@@ -18,6 +18,7 @@ if (context && fs.existsSync(path.resolve(context, 'babel.config.js'))) {
 
 const {
   assetExtensions,
+  babelLoader: babelLoaderOptions,
   cssLoader: cssLoaderOptions,
   eslint: {
     enabled: eslintEnabled,
@@ -34,7 +35,7 @@ const postcssLoaderOptions = {
 const jsLoaders = [
   {
     loader: 'babel-loader',
-    options: babelOptions
+    options: Object.assign(babelOptions, babelLoaderOptions)
   }
 ];
 
